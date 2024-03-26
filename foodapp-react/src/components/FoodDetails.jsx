@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./foodDetails.module.css";
+import ItemList from "./ItemList";
 export default function FoodDetails({ foodId }) {
   const [food, setFood] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
   const URL = `https://api.spoonacular.com/recipes/${foodId}/information`;
-  const API_KEY = "d80f9e881455431fa231dffdd5d46f84";
+  const API_KEY = "c39ddabcb1a047bcbee095a72e509c69";
 
   useEffect(() => {
     async function fetchFood() {
@@ -47,7 +48,11 @@ export default function FoodDetails({ foodId }) {
           </span>
         </div>
       </div>
-      <div className={styles.recipeCard}>
+      <div className={styles.ingredientsCard}>
+        <h2>Ingredients</h2>
+        <ItemList food={food} isLoading={isLoading} />
+      </div>
+      <div className={styles.recipeInstructionsCard}>
         <h2>Instructions</h2>
         <div className={styles.recipeInstructions}>
           <ol>
@@ -62,5 +67,6 @@ export default function FoodDetails({ foodId }) {
         </div>
       </div>
     </div>
+    // </div>
   );
 }

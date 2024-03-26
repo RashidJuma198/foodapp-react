@@ -36,3 +36,22 @@
 .recipeInstructions li {
   margin: 10px;
 }
+
+.ingredientsCard {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  align-items: center;
+  /* margin-left: 20px; */
+}
+
+.recipeInstructionsCard {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  align-items: center;
+}
